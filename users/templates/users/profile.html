@@ -15,7 +15,7 @@
                          src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'vendor/img/users/default_avatar.jpg' %} {% endif %}"
                          class="img-thumbnail">
                 </div>
-                <form action="{% url 'users:profile' %}" method="post" enctype="multipart/form-data">
+                <form action="{% url 'users:profile' user.id %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-lg-6">
