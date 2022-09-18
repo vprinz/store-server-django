@@ -144,5 +144,5 @@ LOGOUT_REDIRECT_URL = '/'
 EMAIL_HOST = 'smtp.yandex.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'st0re-server@yandex.ru'
-EMAIL_HOST_PASSWORD = 'store-server-password'
+EMAIL_HOST_PASSWORD = 'store-server-pwd'
 EMAIL_USE_SSL = True
