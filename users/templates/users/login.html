@@ -1,5 +1,7 @@
 {% extends 'users/base.html' %}
 
+{% load socialaccount %}
+
 {% block content %}
     <main>
         <div class="container">
@@ -49,7 +51,7 @@
                                     <a href="#">
                                         <i class="fab fa-vk fa-2x" style="color: #4a658b;"></i>
                                     </a>
-                                    <a href="#">
+                                    <a href="{% provider_login_url 'github' %}">
                                         <i class="fab fa-github fa-2x" style="color: #303030;"></i>
                                     </a>
                                     <a href="#">
