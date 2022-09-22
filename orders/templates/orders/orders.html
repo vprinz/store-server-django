@@ -25,7 +25,7 @@
                                 <td>{{ order.created|naturaltime }}</td>
                                 <td>{{ order.basket_history.total_sum|intcomma }} руб.</td>
                                 <td>
-                                    <a href="order.html">просмотреть</a>
+                                    <a href="{% url 'orders:order' order.id %}">просмотреть</a>
                                 </td>
                             </tr>
                         {% endfor %}
