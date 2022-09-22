@@ -32,7 +32,7 @@
             <h4 class="float-right">{{ baskets.total_sum }} руб.</h4>
         </div>
     </div>
-    <a class="btn btn-success btn-lg float-right" href="../orders/checkout_order.html">
+    <a class="btn btn-success btn-lg float-right" href="{% url 'orders:order_create' %}">
         Оформить заказ
     </a>
 {% else %}
