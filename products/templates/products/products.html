@@ -58,32 +58,30 @@
 
                 <div class="row">
 
-                    {% cache 30 object_list %}
-                        {% for product in object_list %}
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="card h-100">
-                                    <a href="#">
-                                        <img class="card-img-top"
-                                             src="{{ product.image.url }}"
-                                             alt="">
+                    {% for product in object_list %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <a href="#">
+                                    <img class="card-img-top"
+                                         src="{{ product.image.url }}"
+                                         alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">{{ product.name }}</a>
+                                    </h4>
+                                    <h5>{{ product.price }} руб.</h5>
+                                    <p class="card-text">{{ product.description }}</p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a class="btn btn-outline-success"
+                                       href="{% url 'products:basket_add' product.id %}">
+                                        Отправить в корзину
                                     </a>
-                                    <div class="card-body">
-                                        <h4 class="card-title">
-                                            <a href="#">{{ product.name }}</a>
-                                        </h4>
-                                        <h5>{{ product.price }} руб.</h5>
-                                        <p class="card-text">{{ product.description }}</p>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a class="btn btn-outline-success"
-                                           href="{% url 'products:basket_add' product.id %}">
-                                            Отправить в корзину
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
-                        {% endfor %}
-                    {% endcache %}
+                        </div>
+                    {% endfor %}
 
                 </div>
 
