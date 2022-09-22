@@ -26,7 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-DOMAIN_NAME = 'http://localhost:8000'
+DOMAIN_NAME = 'http://127.0.0.1:8000'
 
 # Application definition
 
@@ -194,3 +194,8 @@ SOCIALACCOUNT_PROVIDERS = {
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+
+# Stripe
+
+STRIPE_PUBLIC_KEY = 'pk_test_51LkCzuGsznBp4srOYcv0nDMFnWujVLev1kzYs2yOl99F7wGNgfmbnyWFRvH1NSTN5WInwNuSVj7yQRunExTCdREP00iIroSQNA'
+STRIPE_SECRET_KEY = 'sk_test_51LkCzuGsznBp4srOzn1IAm1RbZHUBH9H0tUmLP98mX91CVR3goarW9xt5GrhHsaChCQddqIJIWNqzxHkGNenubUD00YudWa6gF'
