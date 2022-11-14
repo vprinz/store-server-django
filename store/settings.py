@@ -10,9 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import environ
-
 from pathlib import Path
+
+import environ
 
 env = environ.Env(
     DEBUG=(bool),
