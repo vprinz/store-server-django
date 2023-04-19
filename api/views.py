@@ -38,4 +38,4 @@ class BasketModelViewSet(ModelViewSet):
             serializer = self.get_serializer(obj)
             return Response(serializer.data, status=status_code)
         except KeyError:
-            return Response({'product_id': 'Thi field is required.'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'product_id': 'The field is required.'}, status=status.HTTP_400_BAD_REQUEST)
